@@ -1,5 +1,7 @@
 if (Meteor.isClient) {
   
+  Meteor.subscribe('all-Todos');
+
   Template.todos.todoList = function () {
     return Todos.find();
   };
@@ -26,7 +28,7 @@ if (Meteor.isClient) {
 
  function insertNew() 
  {
-     Todos.insert({name:$("#todoText").val()});
+     Meteor.call('addTodo',{name:$("#todoText").val()});
      $("#todoText").val("");
  }
 }
