@@ -1,0 +1,101 @@
+body {
+    background-color: #F7F7F1;
+    color: #626B74;
+    font-family: 'Helvetica Neue',Arial,serif;
+}
+
+form label {
+    display: block;
+    font-size: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+input[type="submit"], input[type="button"] , .btn
+{
+    border:0px;
+    background-color: #16a085;
+    color: #FFF;
+    font-size: 13px;
+    padding:8px 15px;
+}
+
+input[type="text"],input[type="email"],input[type="password"] {
+    font-size: 13px;
+    min-height: 30px;
+    outline: none;
+    border:1px #626B74 solid;
+    padding-left: 5px;
+    margin: 0px;
+}
+
+input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus {
+     border:1px #16a085 solid;
+}
+
+h1 { text-align: center}
+
+#container {
+    max-width: 680px;
+    margin: 0px auto;
+}
+
+.todoItems {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.todoItems li {
+    padding: 5px;
+    position: relative;
+    font-size: 12px;
+}
+.todoItems li:nth-child(even) {
+    background: #E1D1BD;
+}
+
+input[type="button"].done {
+    color: #FFF;
+    background-color: #F95952;
+    outline: none;
+    border:0px;
+    cursor: pointer;
+    
+    top: 2px;
+    position: absolute;
+    right: 5px;
+    height: 20px;
+    padding: 3px;
+    margin: 0px;
+
+}
+
+#todoText {
+    width: 82%;
+    height: 30px;
+    outline: none;
+    border:1px #626B74 solid;
+    padding-left: 5px;
+}
+
+#todoText:focus ,#todoText:hover{ 
+    border:1px #2E93AC solid;
+    outline: none;
+}
+
+#btnAdd {
+    width: 15%;
+    height: 35px;
+    background-color: #2E93AC;
+    border: 0px;
+    color: #FFF;
+    margin-left: 1%;
+    padding: 5px;
+}
+
+#addnew {
+    padding-top: 5px;
+}
+
