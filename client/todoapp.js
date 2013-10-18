@@ -18,6 +18,10 @@ if (Meteor.isClient) {
       if (evt.which === 13) {
         insertNew();
       }
+    },
+    'click #logout' : function (e,t) {
+      e.preventDefault();
+      Meteor.logout();
     }
   });
   Template.todoItem.events({

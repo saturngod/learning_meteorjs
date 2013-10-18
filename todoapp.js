@@ -7,8 +7,8 @@ if (Meteor.isServer) {
       var names = ["Eat",
                    "Sleep",
                    "Wakeup"];
-      for (var i = 0; i < names.length; i++)
-        Meteor.call('addTodo',{name:$("#todoText").val()});
+      // for (var i = 0; i < names.length; i++)
+      //   Meteor.call('addTodo',{name:$("#todoText").val()});
     }
   })
 }

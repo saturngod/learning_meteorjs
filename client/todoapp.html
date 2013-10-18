@@ -5,19 +5,27 @@
 <body>
 
     <div id="container">
-    <h1>Todo app</h1>
+    
+    {{#if currentUser}}
         {{> todos}}
+    {{else}}
+        {{> userForm}}
+    {{/if}}
+
     </div>
 </body>
 
+
 <template name="todos">
+<h1>Todo app</h1> <a href="#" id="logout">Logout</a>
 <ul class='todoItems'>
   {{#each todoList}}
     {{> todoItem}}
   {{/each}}
 </ul>
 <div id="addnew">
-<input type="text" id="todoText" name="todoText" placeholder="What do you need to do ?"><input id="btnAdd" type="button" value="Add">
+<input type="text" id="todoText" name="todoText" placeholder="What do you need to do ?">
+<input id="btnAdd" type="button" value="Add">
 </div>
 </template>
 
