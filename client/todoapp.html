@@ -18,7 +18,7 @@
 
 <template name="todos">
 <h1>Todo app</h1>
-<p>Welcome {{username}}</p><a href="#" id="logout">Logout</a>
+<p>Welcome {{username}}</p><a href="#" id="logout">Logout</a> | <a href="/archive">Done</a>
 <ul class='todoItems'>
   {{#each todoList}}
     {{> todoItem}}

@@ -3,7 +3,7 @@ if (Meteor.isClient) {
   Meteor.subscribe('all-Todos');
 
   Template.todos.todoList = function () {
-    return Todos.find({userid:Meteor.user()._id});
+    return Todos.find({userid:Meteor.user()._id,done:0});
   };
 
   Template.todoItem.itemID = function () {
@@ -30,7 +30,7 @@ if (Meteor.isClient) {
   });
   Template.todoItem.events({
     'click input.done' : function(){
-      Todos.remove(this._id);
+      archiveByID(this._id);
     }
   });
 
@@ -38,5 +38,10 @@ if (Meteor.isClient) {
  {
      Meteor.call('addTodo',{userid:Meteor.user()._id,name:$("#todoText").val()});
      $("#todoText").val("");
+ }
+
+ function archiveByID(done_id)
+ {
+    Meteor.call('archive',done_id);
  }
 }
