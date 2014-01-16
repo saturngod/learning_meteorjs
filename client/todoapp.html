@@ -1,0 +1,31 @@
+<head>
+  <title>todoapp</title>
+</head>
+
+<body>
+
+    <div id="container">
+    
+    {{renderPage}}
+
+    </div>
+</body>
+
+
+<template name="todos">
+  <h1>Todo app</h1>
+  <p>Welcome {{username}}</p><a href="#" id="logout">Logout</a> | <a href="/archive">Done</a>
+  <ul class='todoItems'>
+    {{#each todoList}}
+      {{> todoItem}}
+    {{/each}}
+  </ul>
+  <div id="addnew">
+  <input type="text" id="todoText" name="todoText" placeholder="What do you need to do ?">
+  <input id="btnAdd" type="button" value="Add">
+  </div>
+</template>
+
+<template name="todoItem">
+    <li>{{name}} <input class="done" id="{{itemID}}" type="button" value="Done">
+</template>

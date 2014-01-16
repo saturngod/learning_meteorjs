@@ -7,3 +7,5 @@ insecure
 preserve-inputs
 accounts-base
 accounts-password
+standard-app-packages
+router
