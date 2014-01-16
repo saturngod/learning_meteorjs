@@ -9,16 +9,24 @@ Meteor.methods({
         doc.done = 0;
         return Todos.insert(doc);
     },
-    archive: function(done_id) {
+    archiveItem: function(done_id) {
 
-    	var id;
-    	id = new ObjectID(done_id);
-
-    	Todos.update({_id:id},{
+    	return Todos.update({_id:done_id},{
     		 $set: {
         		done : 1
       		}
     	});
+    },
+    restoreItem: function(done_id) {
+        return Todos.update({_id:done_id},{
+             $set: {
+                done : 0
+            }
+        });
+    },
+    deleteItem: function(done_id) {
+        return Todos.remove(done_id);
     }
+
 
 });

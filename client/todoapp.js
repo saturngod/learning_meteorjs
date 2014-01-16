@@ -42,6 +42,6 @@ if (Meteor.isClient) {
 
  function archiveByID(done_id)
  {
-    Meteor.call('archive',done_id);
+    Meteor.call('archiveItem',done_id);
  }
 }

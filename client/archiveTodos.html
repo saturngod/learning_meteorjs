@@ -1,0 +1,15 @@
+<template name="archiveTodos">
+  
+  <h1>Todo app , Archived</h1>
+  <p>Welcome {{username}}</p><a href="#" id="logout">Logout</a> | <a href="/">Todos</a>
+  <ul class='todoItems'>
+    
+    {{#each todoList}}
+      {{> todoItemArchive}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="todoItemArchive">
+    <li>{{name}} <input class="delete" id="{{itemID}}" type="button" value="Delete"> <input class="restore" id="{{itemID}}" type="button" value="Restore">
+</template>
